@@ -15,7 +15,7 @@ void sub(char* s, int st, int ed) {
 
 int main(int argc, char* argv[]) {
     if (argc != 3 && argc != 4) {
-        printf("Usage: str startIndex optional_endIndex(not included)\n");
+        printf("Usage: substring str startIndex optional_endIndex(not included)\n");
         return 1;
     }
     int len = strnlen(argv[1], 1024);
