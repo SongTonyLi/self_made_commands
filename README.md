@@ -7,6 +7,4 @@ Please make sure to compile the c-programs yourself. Some executibles only work 
 
 First when you cloned the repo, in your `fish`, type the following `fish_add_path {location of the repo}`.
 
-For Python programmed commands, I tried to use some Python programs to force the file to be executibles, but unfortunately, all of programs become very slow. I figured that maybe it's better to just use `fish` alias. 
-
-Before trying Python commands, please type `alias {python file name without .py} {python python file name with .py}` in your `fish` and then type `funcsave {python file name without .py}`.
+For Python files the first line is my location of python, when used please use your own location of python. If you can not find your location of python, try typing `which python` in your terminal.
