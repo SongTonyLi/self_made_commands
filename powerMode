@@ -4,8 +4,8 @@ import sys
 
 if __name__ == '__main__':
     args = sys.argv
-    on_list = ['ON', 'on', 1, 'On']
-    off_list = ['OFF', 'off', 0, 'Off']
+    on_list = ['ON', 'on', '1', 'On']
+    off_list = ['OFF', 'off', '0', 'Off']
     if len(args) != 2 or args[1] not in on_list + off_list:
         print("Usage: powerMode [ON/on/On/1/OFF/off/Off/0]")
     else:
