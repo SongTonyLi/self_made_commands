@@ -1,0 +1,11 @@
+#! /Users/songli/anaconda3/bin/python
+import sys
+
+if __name__ == '__main__':
+    args = sys.argv
+    if len(args) != 3:
+        print("Usage: strSplit input subString")
+    else:
+        splits = args[1].split(args[2])
+        for s in splits:
+            print(s)
