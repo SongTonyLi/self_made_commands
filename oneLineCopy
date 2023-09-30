@@ -1,0 +1,11 @@
+#! /Users/songli/anaconda3/bin/python
+import os
+import sys
+
+if __name__ == '__main__':
+    for line in sys.stdin:
+        line = line.replace('\n', '')
+        print(line)
+        print("Successfully Copied")
+        os.system(f"printf \'{line}\' | pbcopy")
+        break
