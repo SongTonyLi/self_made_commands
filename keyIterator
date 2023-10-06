@@ -60,13 +60,15 @@ def main():
         line = line.replace("\n", "")
         lines.append(line)
     magic_offset = 41 # Chinese charaters may not take just one unit in terminal
-    columns = os.get_terminal_size()[0] - magic_offset
-    for i in range(min(20, len(lines))):
+    shape = os.get_terminal_size()
+    columns = shape[0] - magic_offset
+    rows = shape[1] - 1
+    for i in range(min(rows, len(lines))):
         printout = "--> " + lines[i] if i == 0 else lines[i]
         if len(printout) > columns:
             printout = printout[:columns]
         print(printout)
-    kiter = keyIterator(lines, 0, min(20, len(lines)), 20, columns)
+    kiter = keyIterator(lines, 0, min(rows, len(lines)), rows, columns)
     listener = keyboard.Listener(on_press=kiter.on_press, suppress=True)
     listener.start()  # start to listen on a separate thread
     listener.join()  # remove if main thread is polling self.keys

@@ -1,0 +1,14 @@
+#! /Users/songli/anaconda3/bin/python
+import os
+import sys
+
+if __name__ == '__main__':
+    args = sys.argv
+    if len(args) == 1:
+        print("Usage: map command")
+    else:
+        commands = ''
+        for arg in args[1:]:
+            commands.join(f"{arg} ")
+        for line in sys.stdin:
+            os.system(f"{line} | {commands[:-1]}")
