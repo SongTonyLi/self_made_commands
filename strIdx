@@ -1,0 +1,16 @@
+#! /Users/songli/anaconda3/bin/python
+
+import os
+import sys
+
+if __name__ == '__main__':
+    args = sys.argv
+    if len(args) != 3:
+        print("Usage: strIdx str subString")
+    else:
+        s = args[1]
+        sub = args[2]
+        if sub not in s:
+            print("-1")
+        else:
+            print(f"{s.index(sub)}")
