@@ -1,5 +1,5 @@
 #! /Users/songli/anaconda3/bin/python
-import os
+import subprocess
 import sys
 
 if __name__ == '__main__':
@@ -10,7 +10,7 @@ if __name__ == '__main__':
         print("Usage: powerMode [ON/on/On/1/OFF/off/Off/0]")
     else:
         if args[1] in on_list:
-            os.system('sudo pmset -a lowpowermode 1')
+            subprocess.call('sudo pmset -a lowpowermode 1', shell=True)
         else:
-            os.system('sudo pmset -a lowpowermode 0')
+            subprocess.call('sudo pmset -a lowpowermode 0', shell=True)
     

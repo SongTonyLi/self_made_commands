@@ -1,14 +1,14 @@
 package main
 
 import (
-	"crypto/sha512"
+	"crypto/sha256"
 	"fmt"
 	"os"
 	"strconv"
 )
 
 func hash(data []byte) []byte {
-	hashVal := sha512.Sum512(data)
+	hashVal := sha256.Sum256(data)
 	result := hashVal[:]
 	return result
 }
